@@ -16,7 +16,7 @@ type server struct {
 
 func (s *server) SayHello(ctx context.Context, req *hw.HelloRequest) (*hw.HelloResponse,error){
 	return &hw.HelloResponse{
-		Message: fmt.Sprintf("Hello, %s", req.Name),
+		Message: fmt.Sprintf("Hello, %s!!, Your Age is %d", req.Name,req.Age),
 	}, nil
 }
 
